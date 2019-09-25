@@ -34,5 +34,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/display"
-        android:text="当前文件一共25265字"/>
+        android:text="当前文件一共3204530字"/>
 </LinearLayout>

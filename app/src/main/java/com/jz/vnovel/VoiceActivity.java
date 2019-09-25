@@ -75,7 +75,7 @@ public class VoiceActivity extends AppCompatActivity implements InitListener, Sy
                     speaking = true;
                     locLetter = Long.parseLong(etLoc.getText().toString().trim());
 
-                    if(locLetter > 25265){
+                    if(locLetter > 3204530){
                         ToastHelper.toast(VoiceActivity.this, "所设置字数大于文件总字数");
                         return;
                     }

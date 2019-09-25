@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'jackzhous'
+            keyPassword 'wsdyi100'
+            storeFile file('/Users/sever1/Documents/workplace/VNovel/boxing.keystore')
+            storePassword 'wsdyi100'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.jz.vnovel"
@@ -18,25 +26,22 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     buildToolsVersion '28.0.2'
-
-
-
     allprojects {
         repositories {
 
             // Msc.jar线上maven地址
-            maven{
+            maven {
                 url 'http://libmsc.xfyun.cn/repository/maven-releases/'
             }
             jcenter()
             mavenCentral()
         }
     }
-
 }
 
 dependencies {
